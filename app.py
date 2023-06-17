@@ -4,7 +4,7 @@ from utils import ImageCaptionGenerator
 generator = ImageCaptionGenerator()
 
 def caption_generator(image):   
-    caption = generator.generate_captions(image,5)
+    caption = generator.generate_captions(image)
     captiongpt = generator.capgpt(caption,5)
     captiondict = ast.literal_eval(captiongpt)
     return tuple(captiondict.values())
